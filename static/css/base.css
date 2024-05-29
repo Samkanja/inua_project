@@ -20,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #FFE9ED;
 }
 
 .logo {
@@ -59,4 +60,63 @@ header {
     display: none;
 
 
+}
+
+/* Resposiveness */
+
+@media(max-width:1340px) {
+    header {
+        padding: 30px 4%;
+        transition: .3s;
+    }
+}
+
+@media(max-width:1260px) {}
+
+@media(max-width:1105px) {}
+
+@media(max-width:940px) {
+    header {
+        background-color: #FFE9ED;
+        padding: 20px 4%;
+    }
+}
+
+@media(max-width:800px) {}
+
+@media(max-width:600px) {}
+
+@media(max-width:960px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        padding: 100px 40px;
+        display: block;
+        flex-direction: column;
+        background-color: #080808;
+        transition: all .42s ease-in-out;
+    }
+
+    .navbar a {
+        display: block;
+        color: #FFf;
+        margin: 30px 0;
+        font-size: 24px;
+    }
+
+    .navlist a:hover {
+        transform: translateX(5px);
+        border-bottom: 2px solid transparent;
+    }
+
+    .navbar.open {
+        right: 0;
+    }
 }

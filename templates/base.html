@@ -29,6 +29,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Directors</a></li>
             <li><a href="#">Activity</a></li>
+            <li><a href="#">Forum</a></li>
             <li><a href="#">Gallery</a></li>
         </ul>
         <div class="nav-right">
@@ -37,8 +38,19 @@
 
     </header>
 
+
     {% block contect %}
     {% endblock %}
+
+    <script>
+        let menu = document.querySelector('#menu-icon')
+        let navbar = document.querySelector('.navbar')
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x')
+            navbar.classList.toggle('open')
+        }
+    </script>
 </body>
 
 </html>
