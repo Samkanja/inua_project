@@ -28,14 +28,13 @@
         </div>
 
         <ul class="navlist">
-            <li><a href="">Programs</a></li>
+            <li><a href="{{ url_for('client.home')}}">Programs</a></li>
             <li><a href="">Activity</a></li>
             <li><a href="">Directors</a></li>
             <li><a href="">Gallery</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="{{ url_for('client.about_us')}}">About</a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon">
-
         </div>
     </header>
 
@@ -81,9 +80,6 @@
         <p>Copyright <a href="#">&copy;</a>2023; <span class="designer"> INUA COLLECTIVE
                 SOCIETY</span></p>
     </div>
-
-
-
 
     <!-- js custom link -->
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
