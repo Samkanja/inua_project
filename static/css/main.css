@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 12%;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+}
+
+.navlist a {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    transition: all .42s;
+}
+
+.navlist .active {
+    color: #646464;
+}
+
+.navlist a:hover {
+    color: #646464;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #212121;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section */
+
+section {
+    padding: 60px 12%;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    padding: 150px;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-img {
+    position: relative;
+    margin-left: 20px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+.img1 {
+    position: absolute;
+    top: 0;
+    z-index: 4;
+
+}
+
+.img2 {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    z-index: 5;
+    transition: .3s;
+
+}
+
+.hero-img:hover .img2 {
+    /* top: 0px; */
+    /* left: 0px; */
+    transform: scale(1.3);
+
+}
+
+.hero-text h1 {
+    color: #36455c;
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    max-width: 520px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 30px;
+    margin: 0 0px 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #37806B;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: all .42s;
+}
+
+.hero-btn:hover {
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+/* header-sticky-design */
+
+header.sticky {
+    background-color: #fff;
+    padding: 14px 12%;
+    box-shadow: 0px 4px 15px rgb(0 0 0/ 8%);
+    transition: all .42s;
+}
+
+/* programs */
+
+.main-programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.program-img {
+    position: relative;
+}
+
+.program-img img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+}
+
+.prog1 {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.prog2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transition: .3s;
+    z-index: 6;
+}
+
+.program-img:hover .prog2 {
+    /* top: 0; */
+    /* left: 0; */
+    transform: scale(1.3);
+}
+
+.program-text h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.program-text h1 {
+    color: #212121;
+    font-weight: 500;
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+.program-text p {
+    color: #646464;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+
+}
+
+.program-btn {
+    display: inline-block;
+    /* background: #37806B; */
+    background: #4d9559;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: 10px 30px;
+    border-radius: 30px;
+    /* border-bottom-right-radius: 15px; */
+    /* border-top-left-radius: 15px; */
+    transition: all .42s;
+}
+
+.program-btn:hover {
+    color: #646464;
+    background: transparent;
+    border: 1px solid #4d9559;
+    transform: translateX(8px);
+}
