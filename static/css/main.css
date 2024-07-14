@@ -457,6 +457,87 @@ header.sticky {
 
 }
 
+
+/* about section */
+.about {
+    width: 100%;
+    align-items: center;
+    /* height: 100vh; */
+    padding: 150px;
+    background: linear-gradient(245.59deg, #61f38d 0%, #68fda6 28.53%, #60f385 75.52%);
+}
+
+.about-heading h1 {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 30px;
+
+}
+
+.about-heading p {
+    /* font-size: 18px;
+    color: #666;*/
+    margin-bottom: 35px;
+    color: #212121;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+.main-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-img {
+    position: relative;
+    margin-left: 20px;
+}
+
+.about-img img {
+    max-width: 100%;
+    width: 540px;
+    height: auto;
+}
+
+.about-img:hover img {
+    /* top: 0px; */
+    /* left: 0px; */
+    transform: scale(1.3);
+
+}
+
+.about-text p {
+    max-width: 600px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 30px;
+    margin: 0 0px 30px;
+}
+
+.about-text h2 {}
+
+/* .about-heading h1::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 4px;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: #4caf50;
+} */
+
+
 /* Responsiveness */
 
 @media (max-width: 1400px) {
@@ -482,6 +563,7 @@ header.sticky {
         transition: .3s;
     }
 
+    .about-text p,
     .hero-text p {
         margin: auto;
     }
@@ -489,7 +571,20 @@ header.sticky {
     .program-btn {
         margin-top: 25px;
     }
+
+    .main-about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-img {
+        text-align: center;
+    }
 }
+
 
 @media (max-width: 1080px) {
     .hero-text h1 {
@@ -502,14 +597,29 @@ header.sticky {
         transition: .3s;
     }
 
+    .main-about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-img {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 980px) {
+
+    .main-about,
     .hero {
         grid-template-columns: 1fr;
         height: 100%;
     }
 
+    .about-text,
     .hero-text {
         text-align: center;
         margin-top: -30px;

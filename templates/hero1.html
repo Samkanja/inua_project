@@ -11,6 +11,71 @@
             communities in BC lower mainland.</p>
         <a class="about-new-more" href="#">Learn More</a>
     </div>
-
-
 </section>
+<main class="about">
+    <div class="about-heading">
+        <h1>About Us</h1>
+        <p>INUA COLLECTIVE SOCIETY</p>
+    </div>
+    <div class="about-img">
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/hero.jpg')}}">
+        </div>
+        <div class="about-content">
+            <h2>INUA COLLECTIVE SOCIETY</h2>
+            <p>{{ abouts.about.description }}</p>
+        </div>
+
+    </div>
+
+    <div class="mission-vision-corevalues">
+        <div class="mission-heading-new">
+            <section class="mission-content-section">
+                <div class="mission-image">
+                    <img src="{{ url_for('static', filename='images/mission.png')}}">
+                </div>
+
+                <div class="mission-content">
+                    <h2>MISSION</h2>
+                    <p>{{ abouts.about.mission }}</p>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="vision-heading-new">
+            <section class="vision-content-section">
+                <div class="vision-image">
+                    <img src="{{ url_for('static', filename='images/vission.png')}}">
+                </div>
+                <div class="vision-content">
+                    <h2>VISION</h2>
+                    <p>{{ abouts.about.vission }}</p>
+                </div>
+            </section>
+        </div>
+        <div class="core-values-heading-new">
+            <section class="core-values-content-section">
+                <div class="core-values-image">
+                    <img src="{{ url_for('static', filename='images/goal.png')}}">
+                </div>
+            </section>
+            <div class="core-values-content">
+                <h2>CORE VALUES</h2>
+                <ul>
+                    <li>Innovation</li>
+                    <li>Integrity</li>
+                    <li>Dignity</li>
+                    <li>Partnership & Collaborations</li>
+                    <li>Inclusic</li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+</main>
