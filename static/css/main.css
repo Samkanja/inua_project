@@ -45,8 +45,9 @@ header {
 }
 
 .navlist a:hover {
-    color: rgb(5, 139, 184);
+    color: #fff;
     transform: translateX(5px);
+
 }
 
 #menu-icon {
