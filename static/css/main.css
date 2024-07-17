@@ -153,18 +153,19 @@ section {
 /* header-sticky-design */
 
 header.sticky {
-    background-color: rgb(231, 176, 74);
+    /* background-color: rgb(231, 176, 74); */
+    background-color: #e2e2e2;
     padding: 14px 12%;
     box-shadow: 0px 4px 15px rgb(0 0 0/ 8%);
     transition: all .42s;
 }
 
 /* programs */
-.programs {
+.program {
     background: #f1f1f1;
 }
 
-.main-programs {
+.main-program {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -537,6 +538,22 @@ header.sticky {
     background-color: #4caf50;
 } */
 
+/* programs sections */
+/* .even {
+    background-color: lightblue;
+} */
+.programs div {
+    display: flex;
+    flex-direction: column;
+}
+.even p {
+    order: -1;
+    color: #68fda6;
+}
+.even h1{
+    order: -2;
+}
+
 
 /* Responsiveness */
 
@@ -647,7 +664,7 @@ header.sticky {
 }
 
 @media (max-width: 1175px) {
-    .main-programs {
+    .main-program {
         grid-template-columns: 1fr;
         height: 100%;
     }

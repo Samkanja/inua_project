@@ -1,6 +1,7 @@
+from flask import Flask, request
 from core.client.routes import client_views
 from core.admin.routes import admin_views, bcrypt
-from core.config import Config
+from core.config import DevelopmentConfig, ProductionConfig
 from flask_sqlalchemy import SQLAlchemy
 from core.models import db, login_manager
 
@@ -10,8 +11,11 @@ from core.models import db, login_manager
 login_manager.login_view = 'admin.login'
 
 def config_all(app):
-     app.config.from_object(Config)
-
+     if app.debug:
+          app.config.from_object(DevelopmentConfig)
+     else:
+          app.config.from_object(ProductionConfig)
+          
      db.init_app(app)
      bcrypt.init_app(app)
      login_manager.init_app(app)
