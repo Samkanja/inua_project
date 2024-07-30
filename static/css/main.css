@@ -546,11 +546,13 @@ header.sticky {
     display: flex;
     flex-direction: column;
 }
+
 .even p {
     order: -1;
     color: #68fda6;
 }
-.even h1{
+
+.even h1 {
     order: -2;
 }
 
