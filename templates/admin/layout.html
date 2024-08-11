@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- bootstrap Registration Form -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Css link -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
 
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,89 +15,19 @@
     <!-- Boxicon link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-
+    <!-- Css link -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
     {% if title %}
-        <title>Inua collective soceity {{title}}</title>
+    <title>Inua collective soceity {{title}}</title>
     {% else %}
-        <title>Inua collective soceity</title>
+    <title>Inua collective soceity</title>
     {% endif %}
-    
 </head>
 
 <body>
-    <header>
-        <a href="{{ url_for('client.home')}}" class="logo"><img
-                src="{{ url_for('static', filename='images/inua.png')}}"></a>
-
-        <ul class="navlist">
-            <li><a href="{{ url_for('admin.admin_home')}}" class="active">Home</a></li>
-            <li><a href="">Programs</a></li>
-            <li><a href="{{ url_for('client.about_us')}}">About Us</a></li>
-            <li><a href="">Blog</a></li>
-            {% if current_user.is_authenticated %}
-                <li><a href="{{ url_for('admin.logout')}}">Logout</a></li>
-            {% else %}
-                <li><a href="{{ url_for('admin.login')}}">Login</a></li>
-                <li><a href="{{ url_for('admin.register')}}">Register</a></li>
-            {% endif %}
-        </ul>
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </header>
     {% block content %}
     {% endblock %}
-    <section class="contact">
-        <div class="contact-info">
-            <div class="info1">
-                <img src="{{ url_for('static', filename='images/inua.png')}}">
-                <p>Do you love your community? Do you feel like it's a place that
-                </p>
-                <div class="info-socials">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                </div>
-            </div>
 
-
-            <div class="info2">
-                <h4>Quick Links</h4>
-                <p>About Us</p>
-                <p>Our programs</p>
-                <p>Latest Event</p>
-                <p>Ruto must go</p>
-
-            </div>
-            <div class="info2">
-                <h4>Organization</h4>
-                <p>About Us</p>
-                <p>Our programs</p>
-                <p>Latest Event</p>
-                <p>Ruto must go</p>
-
-            </div>
-            <div class="info4">
-                <h4>Contact us</h4>
-                <p>9343 149 street</p>
-                <p>Surrey, BC</p>
-                <p>inuacollective@gmail.com</p>
-                <p>6046165717</p>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer section -->
-    <div class="footer">
-        <div class="footer-text">
-            <p>@Copyright 2024 - by Anjaks Design</p>
-        </div>
-    </div>
-
-
-    <!-- js custom link -->
-    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
 </body>
 
 </html>

@@ -1,25 +1,23 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, TextAreaField
-from wtforms.validators import DataRequired, EqualTo, Length
-from flask_wtf.file import FileField, FileAllowed
+from wtforms import StringField, TextAreaField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, EqualTo
 
 
-class AdminRegistrationForm(FlaskForm):
-    username = StringField("Username", validators=[DataRequired(), Length(min=2,max=30)])
-    password = PasswordField("Password",validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')]
+class RegistrationForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    confirm_password = PasswordField(
+        "Confirm Password", validators=[DataRequired(), EqualTo("password")]
     )
-    submit = SubmitField("Sign Up")
+    submit = SubmitField("Register")
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
+    username = StringField("Username", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
 
 class ProgramForm(FlaskForm):
-    title = StringField("Title", validators=[DataRequired(), Length(min=2, max=120)])
-    description = TextAreaField("Description", validators=[DataRequired()])
-    picture = FileField("Update Profile Picture", validators=[FileAllowed(["jpg","png"])])
-    submit = SubmitField("Post Program")
+    title = StringField("Title", validators=[DataRequired()])
+    content = TextAreaField("Description", validators=[DataRequired()])

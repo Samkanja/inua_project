@@ -1,0 +1,5 @@
+{% for program in programs %}
+<h1>{{ program.title }}</h1>
+<p>{{ program.content }}</p>
+<img src="{{ url_for( 'static', filename=program.image_file ) }}">
+{% endfor %}
