@@ -557,7 +557,14 @@ header.sticky {
 }
 
 /* Programs section */
-.programs-sc {}
+.programs-sc {
+    width: 100%;
+    /* height: 100vh; */
+    padding: 150px;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(245.59deg, #61f38d 0%, #68fda6 28.53%, #60f385 75.52%);
+}
 
 .programs-tt {
     text-align: center;
@@ -565,6 +572,7 @@ header.sticky {
     color: #646464;
     font-size: 35px;
     text-decoration: underline;
+    margin-bottom: 40px;
 
 }
 
