@@ -33,14 +33,18 @@ def admin_register():
         return redirect(url_for("admins.admin_home"))
     form = RegistrationForm()
     if form.validate_on_submit():
-        hash_password = bcrypt.generate_password_hash(form.password.data).decode(
-            "utf-8"
-        )
-        admin = Admin(username=form.username.data, password=hash_password)
-        db.session.add(admin)
-        db.session.commit()
-        flash("Your account has been created! You are now able to log in", "success")
-        return redirect(url_for("admins.admin_home"))
+        if Admin.query.count() < 1:
+
+            hash_password = bcrypt.generate_password_hash(form.password.data).decode(
+                "utf-8"
+            )
+            admin = Admin(username=form.username.data, password=hash_password)
+            db.session.add(admin)
+            db.session.commit()
+            flash(
+                "Your account has been created! You are now able to log in", "success"
+            )
+            return redirect(url_for("admins.admin_home"))
     return render_template("admin/register.html", form=form)
 
 
