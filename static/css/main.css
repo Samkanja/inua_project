@@ -542,10 +542,10 @@ header.sticky {
 /* .even {
     background-color: lightblue;
 } */
-.programs div {
+/* .programs div {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .even p {
     order: -1;
@@ -556,6 +556,52 @@ header.sticky {
     order: -2;
 }
 
+/* Programs section */
+.programs-sc {}
+
+.programs-tt {
+    text-align: center;
+    font-weight: bold;
+    color: #646464;
+    font-size: 35px;
+    text-decoration: underline;
+
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.programs-text h1 {
+    color: #212121;
+    font-weight: 500;
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+.programs-text p {
+    color: #646464;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+
+}
+
+.programs-imgs {
+    position: relative;
+}
+
+.programs-imgs img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+}
 
 /* Responsiveness */
 

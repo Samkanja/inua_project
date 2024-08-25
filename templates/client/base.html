@@ -29,8 +29,8 @@
     <header>
         <a href="#" class="logo"><img src="{{ url_for('static', filename='images/inua.png')}}"></a>
         <ul class="navlist">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="">Programs</a></li>
+            <li><a href="{{url_for('client.home')}}" class="active">Home</a></li>
+            <li><a href="{{ url_for('client.programs') }}">Programs</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Events</a></li>
