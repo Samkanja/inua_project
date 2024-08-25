@@ -40,8 +40,47 @@
     </header>
     {% block content %}
     {% endblock %}
-    <section>
-        <h1>Hello, World</h1>
+    <section class="contact">
+        <div class="contact-info">
+            <div class="info1">
+                <img src="{{ url_for('static', filename='images/inua.png')}}">
+                <p>Do you love your community? Do you feel like it's a place that
+                </p>
+                <div class="info-socials">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+
+            <div class="info2">
+                <h4>Quick Links</h4>
+                <p>About Us</p>
+                <p>Our programs</p>
+                <p>Latest Event</p>
+                <p>Ruto must go</p>
+
+            </div>
+            <div class="info2">
+                <h4>Organization</h4>
+                <p>About Us</p>
+                <p>Our programs</p>
+                <p>Latest Event</p>
+                <p>Ruto must go</p>
+
+            </div>
+            <div class="info4">
+                <h4>Contact us</h4>
+                <p>9343 149 street</p>
+                <p>Surrey, BC</p>
+                <p>inuacollective@gmail.com</p>
+                <p>6046165717</p>
+
+            </div>
+
+        </div>
     </section>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
 
